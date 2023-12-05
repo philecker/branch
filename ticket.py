@@ -5,6 +5,7 @@ def jira_ticket(input_str, ticket_code):
     formatted_text = input_str.lower()
     formatted_text = re.sub(r'^[^a-zA-Z0-9]+|[^a-zA-Z0-9]+$', '', formatted_text)
     formatted_text = re.sub(r'(?<=.)[^a-zA-Z0-9](?=.|$)', '-', formatted_text)
+    formatted_text = re.sub(r"-+", '-', formatted_text)
     ticket_code = ticket_code.upper()
     ticket_text = f'issue/AC-{ticket_code}-{formatted_text}'
 
