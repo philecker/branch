@@ -17,3 +17,6 @@ This Python script formats Jira ticket title, branch number and prefix into a fo
 
 ## License
 This script is licensed under the MIT License.
+
+## Future Enhancements
+1. Create into browser extension that copies information from Jira ticket vs. manually entering.
