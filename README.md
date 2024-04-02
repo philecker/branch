@@ -9,7 +9,7 @@ This Python script formats Jira ticket title, branch number and prefix into a fo
 
 ## Usage
 
-1. Run the script: `python ticket.py`
+1. Run the script: `python branch.py`
 2. Enter the text to be formatted when prompted.
 3. Enter the ticket prefix (default is 'AC'; press Enter to use default) when prompted.
 4. Enter the ticket number when prompted.
