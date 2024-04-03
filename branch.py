@@ -1,5 +1,7 @@
 import re
 import subprocess
+import os
+import platform
 
 def jira_ticket(input_str, ticket_prefix, ticket_code):
     formatted_text = input_str.lower()
@@ -13,7 +15,11 @@ def jira_ticket(input_str, ticket_prefix, ticket_code):
 
 def clipboard_copy(text):
     try:
-        subprocess.run(['pbcopy'], input=text, universal_newlines=True, check=True)
+        if platform.system() == 'Windows': # Windows command to copy to clipboard
+            command = 'echo | set /p nul=' + text.strip() + '| clip'
+            os.system(command)
+        if platform.system() == 'Darwin': # MacOS command to copy to clipboard, needs pbcopy installed using 'pip install pbcopy'
+            subprocess.run(['pbcopy'], input=text, universal_newlines=True, check=True)
         print("Formatted text copied to clipboard.")
     except subprocess.CalledProcessError as e:
         print(f"Error copying to clipboard: {e}")
