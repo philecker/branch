@@ -2,11 +2,6 @@
 
 This Python script formats Jira ticket title, branch number and prefix into a formatted branch name and copies it to the clipboard. It allows users to customize the Jira ticket prefix and code.
 
-## Prerequisites
-
-- Python 3.x
-- (For macOS) `pbcopy` command for clipboard interaction
-
 ## Usage
 
 1. Run the script: `python branch.py`
