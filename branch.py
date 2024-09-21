@@ -30,10 +30,12 @@ if __name__ == "__main__":
     if ticket_type == '1':
         ticket_type = 'issue'
     elif ticket_type == '2':
-        ticket_type = 'bugfix'
+        ticket_type = 'hotfix'
     elif ticket_type == '3':
-        ticket_type = 'feature'
+        ticket_type = 'bugfix'
     elif ticket_type == '4':
+        ticket_type = 'feature'
+    elif ticket_type == '5':
         ticket_type = input("Enter the ticket type: ")
 
     ticket_prefix = input("Enter the ticket prefix (default is 'AC', press Enter to use default): ") or 'AC'
