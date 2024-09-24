@@ -25,7 +25,7 @@ def clipboard_copy(text):
         print(f"Error copying to clipboard: {e}")
 
 if __name__ == "__main__":
-    ticket_type = input("Enter the ticket type (1: issue, 2: bugfix, 3: feature, 4: other) (default is 'issue', press Enter to use default): ") or '1'
+    ticket_type = input("Enter the ticket type (1: issue, 2: hotfix, 3: bugfix, 4: feature, 5: other) (default is 'issue', press Enter to use default): ") or '1'
 
     if ticket_type == '1':
         ticket_type = 'issue'
